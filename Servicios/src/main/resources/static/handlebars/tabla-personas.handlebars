@@ -1,0 +1,27 @@
+
+<script id="tabla-personas" type="text/x-handlebars-template">
+   
+			<table class="table" id="tabla-persona">
+                        <thead>
+                                <tr>
+                                        <td>Id</td>
+                                        <td>Nombre</td>
+                                        <td>Apellidos</td>
+                                        <td>Sexo</td>
+                                        <td>Cedula</td>
+                                </tr>
+                        </thead>
+                        <tbody>
+								{{#each personas}}
+                                <tr th:each="persona: ${personas}">
+                                        <td data-th-text="${persona.id}">{{id}}</td>
+                                        <td data-th-text="${persona.nombre}">{{nombre}}</td>
+                                        <td data-th-text="${persona.apellidos}">{{apellidos}}</td>
+                                        <td data-th-text="${persona.sexo}">{{sexo}}</td>
+                                        <td data-th-text="${persona.cedula}">{{cedula}}</td>
+                                </tr>
+							{{/each}}
+                        </tbody>
+                </table>
+
+</script>
